@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { useLocation } from 'react-router-dom'
 
 const FullScreenNav = () => {
+    const fullNavLinkRef = useRef(null);
+     useGSAP(function(){
+    const tl = gsap.timeline()
+
+    tl.from('.stairRing',{
+      height:0,
+      stagger:{
+        amount:-0.2
+      }
+    })
+    tl.from(fullNavLinkRef.current,{
+        opacity:0,
+    })
+
+  })
   return (
     <>
      <div className='fullScreenNav text-white bg-black h-screen w-full absolute'>
-        <div>
+     <div className='stairsAnimation h-screen w-full fixed'>
+            <div className='h-full w-full flex'>
+            <div className='stairRing h-full w-1/5 bg-black'></div>
+            <div className='stairRing h-full w-1/5 bg-black'></div>
+            <div className='stairRing h-full w-1/5 bg-black'></div>
+            <div className='stairRing h-full w-1/5 bg-black'></div>
+            <div className='stairRing h-full w-1/5 bg-black'></div>
+     </div>
+        </div>
+
+        <div ref={fullNavLinkRef} className='relative'>
             <div className='flex w-full justify-between items-start'>
         <div className='p-2'>
         <div className='w-40 h-12'>
