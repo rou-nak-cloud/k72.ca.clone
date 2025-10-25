@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const Navbar = () => {
+    const navGreenRef = useRef(null)
   return (
    <div className='z-4 fixed flex justify-between items-start top-0 w-full'>
     <div className='p-2'>
@@ -10,8 +11,19 @@ const Navbar = () => {
      </svg>
    </div>
     </div>
-   <div className='bg-black h-13 w-[17vw]'>
-
+   <div
+    onMouseEnter={()=>{
+        navGreenRef.current.style.height = '100%'
+    }}
+    onMouseLeave={()=>{
+        navGreenRef.current.style.height = '0%'
+    }}
+   className='h-12 w-[17vw] relative'>
+    <div className='bg-black h-full w-full relative '>
+        <div className='absolute top-4 right-7 h-0.5 w-19 bg-emerald-200/80 z-2'></div>
+        <div className='absolute top-6 right-7 h-0.5 w-10 bg-emerald-300/70 z-2'></div>
+    </div>
+   <div ref={navGreenRef} className='bg-[#d2fd50c1] transition-all absolute top-0 h-0 w-full cursor-cell'></div>
    </div>
    </div>
   )
