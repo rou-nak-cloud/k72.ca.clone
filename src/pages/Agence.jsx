@@ -29,7 +29,7 @@ const Agence = () => {
     gsap.to(imageDivRef.current,{
       scrollTrigger:{
         trigger:imageDivRef.current,
-        markers:true,
+        // markers:true,
         start:'top 23%',
         end:'top -90%',
         scrub:true,
@@ -49,7 +49,7 @@ const Agence = () => {
   return (
     <>
    <div className='section1'>
-    <div ref={imageDivRef} className='absolute overflow-hidden h-[40vh] w-[15vw] rounded-2xl top-45 left-[30vw] bg-red-400'>
+    <div ref={imageDivRef} className='absolute overflow-hidden h-[40vh] w-[15vw] rounded-2xl top-45 left-[30vw] '>
       <img ref={imageRef} className='h-full w-full object-cover' src="" alt="" />
     </div>
       <div className='relative font-[font300] text-white'>
