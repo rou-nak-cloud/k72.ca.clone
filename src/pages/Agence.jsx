@@ -48,11 +48,11 @@ const Agence = () => {
   })
   return (
     <>
-   <div className='section1'>
+   <div className='section1 py-1'>
     <div ref={imageDivRef} className='absolute overflow-hidden h-[40vh] w-[15vw] rounded-2xl top-45 left-[30vw] '>
       <img ref={imageRef} className='h-full w-full object-cover' src="" alt="" />
     </div>
-      <div className='relative font-[font300] text-white'>
+      <div className='relative font-[font300] text-black'>
       <div className='mt-[52vh]'>
         <h1 className='text-[19vw] leading-[17vw] text-center uppercase'>soxian7e <br />douze</h1>
       </div>

@@ -11,5 +11,6 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(191, 191, 191);
+    overflow-x: hidden;
 }
