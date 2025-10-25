@@ -11,10 +11,28 @@
 }
 
 body{
-    background-color: rgb(191, 191, 191);
+    background-color: rgb(214, 214, 214);
     overflow-x: hidden;
 }
 
-@keyframes identifier {
-    
+.moveX{
+    animation-name: moveAnimation;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.moveLink{
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.link:hover .moveLink{
+    opacity: 1;
+}
+@keyframes moveAnimation {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
