@@ -10,6 +10,7 @@ const FullScreenNav = () => {
 
     tl.from('.stairRing',{
       height:0,
+      delay:.5,
       stagger:{
         amount:-0.2
       }
@@ -17,11 +18,17 @@ const FullScreenNav = () => {
     tl.from(fullNavLinkRef.current,{
         opacity:0,
     })
-
+    tl.from('.link',{
+        rotateX:90,
+        opacity:0,
+        stagger:{
+            amount:0.2,
+        }
+    })
   })
   return (
     <>
-     <div className='fullScreenNav text-white bg-black h-screen w-full absolute'>
+     <div className='fullScreenNav hidden text-white bg-black h-screen w-full absolute'>
      <div className='stairsAnimation h-screen w-full fixed'>
             <div className='h-full w-full flex'>
             <div className='stairRing h-full w-1/5 bg-black'></div>
@@ -48,7 +55,7 @@ const FullScreenNav = () => {
         </div>
         <div className='allLinks py-25'>
 
-            <div className='link border-t-1 border-white/50 relative'>
+            <div className='link origin-top border-t-1 border-white/50 relative'>
                 <h1 className='font-[font300] text-[8vw] text-center pt-3  leading-[.9] uppercase'>Projects</h1>
                 <div className='moveLink absolute flex top-0 bg-[#D3FD50] text-black cursor-cell'>
                     <div className='moveX flex items-center'>
@@ -66,7 +73,7 @@ const FullScreenNav = () => {
                 </div>
             </div>
 
-            <div className='link border-t-1 border-white/50 relative'>
+            <div className='link origin-top border-t-1 border-white/50 relative'>
                 <h1 className='font-[font300] text-[8vw] text-center pt-3  leading-[.9] uppercase'>Agence</h1>
                 <div className='moveLink absolute flex top-0 bg-[#D3FD50] text-black cursor-cell'>
                     <div className='moveX flex items-center'>
@@ -84,7 +91,7 @@ const FullScreenNav = () => {
                 </div>
             </div>
 
-            <div className='link border-t-1 border-white/50 relative'>
+            <div className='link origin-top border-t-1 border-white/50 relative'>
                 <h1 className='font-[font300] text-[8vw] text-center pt-3  leading-[.9] uppercase'>Contact</h1>
                 <div className='moveLink absolute flex top-0 bg-[#D3FD50] text-black cursor-cell'>
                     <div className='moveX flex items-center'>
@@ -102,7 +109,7 @@ const FullScreenNav = () => {
                 </div>
             </div>
 
-            <div className='link border-y-1 border-white/50 relative'>
+            <div className='link origin-top border-y-1 border-white/50 relative'>
                 <h1 className='font-[font300] text-[8vw] text-center pt-3  leading-[.9] uppercase'>Blogs</h1>
                 <div className='moveLink absolute flex top-0 bg-[#D3FD50] text-black cursor-cell'>
                     <div className='moveX flex items-center'>

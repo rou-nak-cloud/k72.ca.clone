@@ -20,8 +20,10 @@ const Navbar = () => {
     }}
    className='h-12 w-[17vw] relative'>
     <div className='bg-black h-full w-full relative '>
-        <div className='absolute top-4 right-7 h-0.5 w-19 bg-emerald-200/80 z-2'></div>
-        <div className='absolute top-6 right-7 h-0.5 w-10 bg-emerald-300/70 z-2'></div>
+        <div className='relative h-full px-10 flex flex-col justify-center items-end gap-1'>
+            <div className='h-0.5 w-19 bg-emerald-200/80 z-2'></div>
+        <div className='h-0.5 w-10 bg-emerald-300/70 z-2'></div>
+        </div>
     </div>
    <div ref={navGreenRef} className='bg-[#d2fd50c1] transition-all absolute top-0 h-0 w-full cursor-cell'></div>
    </div>
