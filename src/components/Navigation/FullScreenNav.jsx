@@ -1,16 +1,21 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useLocation } from 'react-router-dom'
+import { NavbarContext } from '../context/NavContext'
 
 const FullScreenNav = () => {
     const fullNavLinkRef = useRef(null);
-     useGSAP(function(){
-    const tl = gsap.timeline()
+    const fullScreenRef = useRef(null);
+
+    const [navOpen, setNavOpen] = useContext(NavbarContext);
+  
+    function gsapAnimation(){
+     const tl = gsap.timeline()
 
     tl.from('.stairRing',{
       height:0,
-      delay:.5,
+      delay:0.1,
       stagger:{
         amount:-0.2
       }
@@ -19,16 +24,30 @@ const FullScreenNav = () => {
         opacity:0,
     })
     tl.from('.link',{
+        delay:-0.2,
         rotateX:90,
         opacity:0,
         stagger:{
             amount:0.2,
         }
     })
-  })
+    }
+
+    useGSAP(function(){
+        if(navOpen){
+            gsap.to('.fullScreenNav',{
+                display:'block'
+            })
+            gsapAnimation()
+        }else{
+             gsap.to(fullScreenRef.current,{
+                display:'none'
+            })
+        }
+  },[navOpen])
   return (
     <>
-     <div className='fullScreenNav hidden text-white bg-black h-screen w-full absolute'>
+     <div ref={fullScreenRef} className='fullScreenNav z-50 text-white  h-screen w-full absolute overflow-hidden'>
      <div className='stairsAnimation h-screen w-full fixed'>
             <div className='h-full w-full flex'>
             <div className='stairRing h-full w-1/5 bg-black'></div>
@@ -48,7 +67,9 @@ const FullScreenNav = () => {
             </svg>
         </div>
         </div>
-        <div className='h-16 w-15 relative cursor-pointer'>
+        <div onClick={()=>{
+            setNavOpen(false)
+        }} className='h-16 w-15 relative cursor-pointer'>
             <div className='h-full w-1 -rotate-45 origin-center absolute left-7 bg-[#D3FD50]'></div>
             <div className='h-full w-1 rotate-45 origin-center absolute right-7 bg-[#D3FD50]'></div>
         </div>
