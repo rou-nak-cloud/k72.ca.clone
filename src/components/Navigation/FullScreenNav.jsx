@@ -13,38 +13,58 @@ const FullScreenNav = () => {
     function gsapAnimation(){
      const tl = gsap.timeline()
 
-    tl.from('.stairRing',{
-      height:0,
+    tl.to('.fullScreenNav',{
+         display:'block'
+    })
+    tl.to('.stairRing',{
+      height:'100%', 
       delay:0.1,
       stagger:{
         amount:-0.2
       }
     })
-    tl.from(fullNavLinkRef.current,{
-        opacity:0,
+    tl.to(fullNavLinkRef.current,{
+        opacity:1,
     })
-    tl.from('.link',{
-        delay:-0.2,
-        rotateX:90,
-        opacity:0,
+    tl.to('.link',{
+        opacity:1,
+        rotateX:0,
         stagger:{
             amount:0.2,
         }
     })
     }
+     function gsapAnimationReverse() {
+        const tl = gsap.timeline()
+        tl.to('.link', {
+            opacity: 0,
+            rotateX: 90,
+            stagger: {
+                amount: 0.1
+            }
+        })
+        tl.to('.stairRing', {
+            height: 0,
+            stagger: {
+                amount: 0.1
+            }
+        })
+        tl.to(fullNavLinkRef.current, {
+            opacity: 0
+        })
+        tl.to('.fullScreenNav', {
+            display: 'none',
+        })
+    }
 
     useGSAP(function(){
-        if(navOpen){
-            gsap.to('.fullScreenNav',{
-                display:'block'
-            })
-            gsapAnimation()
+        if(navOpen){ 
+           gsapAnimation();
         }else{
-             gsap.to(fullScreenRef.current,{
-                display:'none'
-            })
+          gsapAnimationReverse();
         }
   },[navOpen])
+
   return (
     <>
      <div ref={fullScreenRef} className='fullScreenNav z-50 text-white  h-screen w-full absolute overflow-hidden'>
