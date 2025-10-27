@@ -60,7 +60,7 @@ const Projects = () => {
            </div>
         ))}
       </div>
-      <div className='h-[65vh] bg-black flex justify-between gap-2'>
+      <div className='h-[60vh] bg-black flex justify-between gap-2'>
         <div className='flex justify-center items-start'>
           <h1 className='uppercase text-white border-2 border-white text-[10vh] font-[font500] ml-10 my-5 -pb-7 px-4 rounded-[30px] hover:text-lime-300 hover:border-lime-300 transition-colors cursor-cell'>fb</h1>
           <h1 className='uppercase text-white border-2 border-white text-[10vh] font-[font500] ml-7 my-5 -pb-7 px-4 rounded-[30px] hover:text-lime-300 hover:border-lime-300 transition-colors cursor-cell'>ig</h1>
@@ -71,8 +71,19 @@ const Projects = () => {
           <h1 className='uppercase text-white border-2 border-white text-[10vh] font-[font500] my-5 -pb-7 px-4 mr-8 rounded-[30px] hover:text-lime-300 hover:border-lime-300 transition-colors cursor-cell'>contact</h1>
         </div>
       </div>
-      <div className='footer text-white bg-black'>
-          footer
+      <div className='footer text-white bg-black font-[font300] flex justify-between items-start pb-2'>
+          <div className='text-[1.45vw] pl-10'>
+            <h1>TIME</h1>
+          </div>
+          <div className='flex gap-10'>
+            <h3 className='uppercase hover:text-lime-300 duration-150 transition-colors'>Politique de confidentialité</h3>
+            <h3 className='uppercase hover:text-lime-300 duration-150 transition-colors'>Avis de confidentialité</h3>
+            <h3 className='uppercase hover:text-lime-300 duration-150 transition-colors'>Rapport éthique</h3>
+            <h3 className='uppercase hover:text-lime-300 duration-150 transition-colors'>options de consentement</h3>
+          </div>
+          <div className='text-[1.45vw] pr-10'>
+            <h1 className='uppercase hover:text-lime-300 duration-150 transition-colors'>Retour in haut</h1>
+          </div>
       </div>
     </div>
     </>
