@@ -82,7 +82,7 @@ const Projects = () => {
             <h3 className='uppercase hover:text-lime-300 duration-150 transition-colors'>options de consentement</h3>
           </div>
           <div className='text-[1.45vw] pr-10'>
-            <h1 className='uppercase hover:text-lime-300 duration-150 transition-colors'>Retour in haut</h1>
+            <h1 className=' hover:text-lime-300 duration-150 transition-colors'>rBAKSHI.</h1>
           </div>
       </div>
     </div>
