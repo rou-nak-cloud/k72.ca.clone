@@ -72,14 +72,15 @@ const Agence = () => {
    </div>
 
    <div className='marqueePart relative bg-black lg:h-[170vh] h-[130vh] rounded-t-4xl '>
-    <div className='marqueeReverse moveX w-full absolute lg:top-[490px] top-[570px] left-5 uppercase text-lime-200 lg:text-[22vh] text-[21vw] font-[font500] leading-[18vh] pt-4 lg:z-1 z-3 whitespace-nowrap'>Olivier</div>
-    <div className='pt-60 flex items-center justify-center'>
+    <div className='marqueeReverse moveX w-full absolute lg:top-[490px] top-[570px] left-5 uppercase text-lime-200 lg:text-[22vh] text-[21vw] font-[font500] leading-[18vh] pt-4 lg:z-1 z-3 whitespace-nowrap'>&nbsp;Olivier Oliver Oliver Oliver</div>
+    <div className='pt-60 flex items-center relative justify-center'>
+      <h2 className='z-4 absolute text-center lg:top-35 top-35 lg:text-6xl text-5xl text-lime-300'>Oliver Duclos</h2>
       <img className='rounded-3xl z-2' src="https://k72.ca/images/teamMembers/Olivier_640X960.jpg?w=640&h=960&s=9b715851e76624b3d00c6715af5c47cd" alt="" />
     </div>
-    <div className='marqueeForward moveY z-3 absolute lg:top-[820px] top-[670px] right-20 uppercase text-lime-300 text-[22vh] font-[font500] leading-[18vh] pt-4 whitespace-nowrap'>
-      duclos
+    <div className='marqueeForward moveY z-3 absolute lg:top-[820px] top-[670px] right-20 uppercase text-lime-200 text-[22vh] font-[font500] leading-[18vh] pt-4 whitespace-nowrap'>
+      duclos duclos duclos duclos
     </div>
-      <div className='smallText text-white font-[font500] text-[3vh] absolute lg:right-10 lg:bottom-70 right-7 top-50 hover:text-lime-300 duration-200 transition-colors cursor-cell'>Designer Graphiques</div>
+      <div className='smallText text-white font-[font500] text-[3vh] absolute lg:right-20 lg:bottom-80 right-7 max-md:top-50 hover:text-lime-300 duration-200 transition-colors cursor-cell'>Designer Graphiques</div>
    </div>
    </>
   )
