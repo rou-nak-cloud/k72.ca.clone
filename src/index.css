@@ -23,7 +23,7 @@ body{
 }
 .moveY{
     animation-name: moveAnimationReverse;
-    animation-duration: 7s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
