@@ -21,6 +21,12 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+.moveY{
+    animation-name: moveAnimation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
 .moveLink{
     opacity: 0;
     transition: all 0.4s ease-in-out;
@@ -34,5 +40,13 @@ body{
     }
     to {
         transform: translateX(-100%);
+    }
+}
+@keyframes moveAnimationReverse {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
     }
 }
