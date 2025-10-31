@@ -39,7 +39,7 @@ const Projects = () => {
       scrollTrigger:{
         trigger:'.lol',
         start:'top 90%',
-        end:'top -300%',
+        end:'top -220%',
         // markers:true,
         scrub:true,
       }
@@ -48,14 +48,14 @@ const Projects = () => {
 
   return (
     <>
-    <div className='px-1'>
+    <div className='lg:px-2 px-1'>
      <div className='pt-[40vh] flex'>
-       <h2 className='font-[font500] text-[10vw] uppercase'>Projets</h2>
-       <h1 className='text-black font-[font500] text-[2vw] mt-10 ml-2'>16.</h1>
+       <h2 className='font-[font500] lg:text-[10vw] text-[16vw] uppercase'>Projets</h2>
+       <h1 className='text-black font-[font500] lg:text-[2vw] text-[5vw] lg:mt-10 mt-2.5 ml-2'>16.</h1>
      </div>
-      <div className='outerDiv -mt-15 lol'>
+      <div className='outerDiv lg:-mt-15 mt-0 lol'>
           {projects.map((elem,idx)=>(
-           <div className='hero mb-1'>
+           <div className='hero lg:mb-1 mb-2 flex '>
             <ProjectsCard key={idx} image1={elem.image1} image2={elem.image2} />
            </div>
         ))}
