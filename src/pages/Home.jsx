@@ -16,7 +16,7 @@ const Home = () => {
       <HomeHeroBottomText />
     </div>
 
-    <div className='absolute lg:top-[91%] lg:left-[3%] top-[7%] left-[2%]'>
+    <div className='absolute lg:top-[91%] lg:left-[3%] top-[7%] left-[2%] lg:mt-0 mt-0'>
       <LocalTime  />
     </div>
     </>
