@@ -23,7 +23,7 @@ const LocalTime = () => {
   }, []);
 
   return (
-    <div className="text-3xl font-medium text-white">
+    <div className="lg:text-3xl text-sm font-medium text-white">
     {time} <span className="text-gray-200">🇨🇦</span>
     </div>
   );
