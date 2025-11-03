@@ -3,7 +3,7 @@ A sleek and fully responsive clone of the **K72 Creative Agency** website built 
 This project replicates the creative interactions and animations of the original site with smooth scrolling, dynamic visuals, and a modern frontend setup.
 
 ## 🚀 Live Demo  
-🔗 [View Live Site](https://k72-ca-clone-25y5.onrender.com)  
+🔗 [k72.ca Air Link](https://k72-ca-clone-25y5.onrender.com)  
 
 ## ✨ Key Features  
 - ⚡ Smooth **GSAP** animations for stair effects and scroll-triggered transitions  
